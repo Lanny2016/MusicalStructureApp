@@ -4,26 +4,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class ArtistActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_artist );
-        // creating Array for the artist_list
-        String[] artist_list = new String[5];
-        // adding value to artist_list
-        artist_list[0] = "Artist 1";
-        artist_list[1] = "Artist 2";
-        artist_list[2] = "Artist 3";
-        artist_list[3] = "Artist 4";
-        artist_list[4] = "Artist 5";
-        // displaying the value as a Logcat info
-        Log.v ("artist_list value","artist_list[0] is " + artist_list[0]);
-        Log.v ("artist_list value","artist_list[1] is " + artist_list[1]);
-        Log.v ("artist_list value","artist_list[2] is " + artist_list[2]);
-        Log.v ("artist_list value","artist_list[4] is " + artist_list[3]);
-        Log.v ("artist_list value","artist_list[5] is " + artist_list[4]);
+        // creating ArrayList such as String ArrayList, int ArrayList .....
+        // below we are creating a String arrayList
+        ArrayList<String> artistList = new ArrayList<> ( );
+        // adding values to the artistList
+        artistList.add ( "Artist 1" );
+        artistList.add ( "Artist 2" );
+        artistList.add ( "Artist 3" );
+        artistList.add ( "Artist 4" );
+        artistList.add ( "Artist 5" );
+        // displaying artistList in the logcat info
+        Log.v ( "ArtistList values","ArtistList values index 0 is " + artistList.get ( 0 ));
+        Log.v ( "ArtistList values","ArtistList values index 1 is " + artistList.get ( 1 ));
+        Log.v ( "ArtistList values","ArtistList values index 2 is " + artistList.get ( 2 ));
+        Log.v ( "ArtistList values","ArtistList values index 3 is " + artistList.get ( 3 ));
+        Log.v ( "ArtistList values","ArtistList values index 4 is " + artistList.get ( 4 ));
+
 
 
     }

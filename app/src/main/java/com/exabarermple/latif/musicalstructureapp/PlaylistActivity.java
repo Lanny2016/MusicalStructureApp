@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class PlaylistActivity extends AppCompatActivity {
 
@@ -15,30 +16,23 @@ public class PlaylistActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_playlist );
-        // creating Array to the play_list
-       String[] play_list = new String[5];
-       // adding value to the play_list
-        play_list[0] = "Playlist 1";
-        play_list[1] = "Playlist 2";
-        play_list[2] = "Playlist 3";
-        play_list[3] = "Playlist 4";
-        play_list[4] = "Playlist 5";
+        // creating ArrayList such as String ArrayList, int ArrayList .....
+        // below we are creating a String arrayList
+        ArrayList<String> playList = new ArrayList<String>( );
+        // adding values to the ArrayList
+        playList.add ( "AlbumList 1" );
+        playList.add ( "AlbumList 2" );
+        playList.add ( "AlbumList 3" );
+        playList.add ( "AlbumList 4" );
+        playList.add ( "AlbumList 5" );
+        // displaying ArrayList values in the  Logcat info
+        Log.v ( "ArrayList values","ArrayList values index 0 is " + playList.get ( 0 ));
+        Log.v ( "ArrayList values","ArrayList values index 1 is " + playList.get ( 1 ));
+        Log.v ( "ArrayList values","ArrayList values index 2 is " + playList.get ( 2 ));
+        Log.v ( "ArrayList values","ArrayList values index 3 is " + playList.get ( 3 ));
+        Log.v ( "ArrayList values","ArrayList values index 4 is " + playList.get ( 4 ));
 
-        // displaying the value of the play_list on the layout
 
-        LinearLayout display_list_value = (LinearLayout)findViewById ( R.id.displayListViewValue );
+         }
 
-        TextView listValue1 = new TextView ( this );
-        listValue1.setText ( play_list[0] );
-        listValue1.setTextSize ( 25 );
-        listValue1.setTextColor ( Color.WHITE );
-        display_list_value.addView ( listValue1 );
-        // displaying the second value of the play_list on the layout//
-        TextView listValue2 = new TextView ( this );
-        listValue2.setText ( play_list[1] );
-        listValue2.setTextSize ( 25 );
-        listValue2.setTextColor ( Color.WHITE );
-        display_list_value.addView ( listValue2 );
-
-    }
 }
