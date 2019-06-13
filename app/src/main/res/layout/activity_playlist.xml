@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/displayListViewValue"
+    android:id="@+id/displayPlayListViewValue"
     android:background="#464456"
     android:padding="8dp"
     tools:context=".PlaylistActivity">

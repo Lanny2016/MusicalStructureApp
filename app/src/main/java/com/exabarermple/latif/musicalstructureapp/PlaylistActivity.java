@@ -26,7 +26,7 @@ public class PlaylistActivity extends AppCompatActivity {
         playList.add ( "PlayList 4" );
         playList.add ( "PlayList 5" );
         // displaying all the ArrayList values on the layout by using while loop
- LinearLayout displayValueLayout = (LinearLayout)findViewById ( R.id.displayListViewValue );
+ LinearLayout displayValueLayout = (LinearLayout)findViewById ( R.id.displayPlayListViewValue );
 
  // creating counter variable
         int index = 0;
