@@ -33,7 +33,7 @@ public class PlaylistActivity extends AppCompatActivity {
         listValue1.setTextSize ( 25 );
         listValue1.setTextColor ( Color.WHITE );
         display_list_value.addView ( listValue1 );
-        // displaying the second value of the play_list on the layout
+        // displaying the second value of the play_list on the layout//
         TextView listValue2 = new TextView ( this );
         listValue2.setText ( play_list[1] );
         listValue2.setTextSize ( 25 );
