@@ -20,19 +20,30 @@ public class PlaylistActivity extends AppCompatActivity {
         // below we are creating a String arrayList
         ArrayList<String> playList = new ArrayList<String>( );
         // adding values to the ArrayList
-        playList.add ( "AlbumList 1" );
-        playList.add ( "AlbumList 2" );
-        playList.add ( "AlbumList 3" );
-        playList.add ( "AlbumList 4" );
-        playList.add ( "AlbumList 5" );
-        // displaying ArrayList values in the  Logcat info
-        Log.v ( "ArrayList values","ArrayList values index 0 is " + playList.get ( 0 ));
-        Log.v ( "ArrayList values","ArrayList values index 1 is " + playList.get ( 1 ));
-        Log.v ( "ArrayList values","ArrayList values index 2 is " + playList.get ( 2 ));
-        Log.v ( "ArrayList values","ArrayList values index 3 is " + playList.get ( 3 ));
-        Log.v ( "ArrayList values","ArrayList values index 4 is " + playList.get ( 4 ));
+        playList.add ( "PlayList 1" );
+        playList.add ( "PlayList 2" );
+        playList.add ( "PlayList 3" );
+        playList.add ( "PlayList 4" );
+        playList.add ( "PlayList 5" );
+        // displaying all the ArrayList values on the layout by using while loop
+ LinearLayout displayValueLayout = (LinearLayout)findViewById ( R.id.displayListViewValue );
 
+ // creating counter variable
+        int index = 0;
 
-         }
+       while(index<playList.size()){
+           //Creating a new textView to display in the layout
+           TextView displayTextView = new TextView ( this );
+           // set the textColor
+           displayTextView.setTextColor ( Color.WHITE );
+           // set the textSize
+           displayTextView.setTextSize ( 25 );
+           // set the text to be current playList index
+           displayTextView.setText ( playList.get ( index ) );
+           // add the textView to layout as a child view to be shown in the layout
+           displayValueLayout.addView ( displayTextView );
+           index++;
+        }
+    }
 
 }
