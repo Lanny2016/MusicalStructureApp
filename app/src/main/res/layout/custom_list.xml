@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="77dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:background="#464456">
     <ImageView
@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Playlist 1"
+        tools:text="Playlist 1"
         android:textStyle="italic"
         android:textColor="@android:color/white"
         android:textSize="15sp"
@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="old music"
+            tools:text="Playlist 1"
             android:textStyle="italic"
             android:textColor="@android:color/white"
             android:textSize="15sp"
