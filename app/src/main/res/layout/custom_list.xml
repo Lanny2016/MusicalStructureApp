@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Playlist 1"
+            tools:text="Old Song"
             android:textStyle="italic"
             android:textColor="@android:color/white"
             android:textSize="15sp"
