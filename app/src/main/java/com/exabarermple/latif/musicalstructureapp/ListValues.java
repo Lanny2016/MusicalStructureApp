@@ -6,7 +6,7 @@ package com.exabarermple.latif.musicalstructureapp;
  * only shows one value as a list
  * by making our own class we can display the values on the custom_list*/
 
-public class ListValues {
+class ListValues {
     // fist value object for the ListValue
     private String firstValue;
     // second value object for the ListValue
@@ -24,9 +24,6 @@ public class ListValues {
     public String getFirstValue(){
         return firstValue;
     }
-    public String getSecondValue(){
-        return secondValue;
-    }
-
+    public String getSecondValue(){ return secondValue; }
 
 }

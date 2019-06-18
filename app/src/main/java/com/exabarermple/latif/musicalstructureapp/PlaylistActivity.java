@@ -20,19 +20,26 @@ public class PlaylistActivity extends AppCompatActivity {
         setContentView ( R.layout.activity_playlist );
         // creating ArrayList such as String ArrayList, int ArrayList .....
         // below we are creating a String arrayList
-        ArrayList<String> playList = new ArrayList<String> ();
+        ArrayList<ListValues> playList = new ArrayList<ListValues> ();
         // adding values to the ArrayList
-        playList.add ( "PlayList 1" );
-        playList.add ( "PlayList 2" );
-        playList.add ( "PlayList 3" );
-        playList.add ( "PlayList 4" );
-        playList.add ( "PlayList 5" );
+       // playList.add ( "PlayList 1" );
+        // creating ListValues object out of ListValues class
+        ListValues listValues = new ListValues ("Playlist1","Old" );
+        // now we add the values to playList array
+        playList.add ( listValues );
+        // or we can make it easy like below
+
+        playList.add ( new ListValues ("Playlist2","Old" ) );
+        playList.add ( new ListValues ("Playlist3","New" ) );
+        playList.add ( new ListValues ("Playlist4","Old" ) );
+        playList.add ( new ListValues ("Playlist5","New" ));
         // Creating ArrayAdapter so that we can display the array values in android system layout
         //android.R.layout.simple_expandable_list_item_1
-        ArrayAdapter<String> itemsAdapter =
-                new ArrayAdapter<String> ( this, android.R.layout.simple_expandable_list_item_1, playList );
+//        ArrayAdapter<ListValues> itemsAdapter =
+//                new ArrayAdapter<ListValues>(this,R.layout.custom_list ,playList);
+        CustomAdapter customAdapter = new CustomAdapter ( this,playList );
         ListView listView = (ListView) findViewById ( R.id.playlistView );
-        listView.setAdapter ( itemsAdapter );
+        listView.setAdapter ( customAdapter );
     }
 }
 

@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
     <TextView
+        android:id="@+id/textOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="Playlist 1"
@@ -25,6 +26,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="12dp"/>
         <TextView
+            android:id="@+id/textTwo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="Old Song"
